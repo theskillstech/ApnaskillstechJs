@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice of Channel </title>
+</head>
+<body>
+    <script>
+        const name = "Basheer";
+        console.log(name); // output Basheer
+
+        for(let i of name){
+            // console.log("Iterating : The Name of :"+i);
+            document.write("<br>"+i)            
+        }
+
+        const numbers  = [1,2,3,4,5,6,7,8,9];
+
+        for(let num of numbers){
+            console.log("numbers is "+num);
+        }
+        for(let ind in numbers){
+            console.log("using with "+ind);
+        }
+        const obj = {
+                name:'Basheer',
+                age:23,
+
+            };
+
+            for(objs in obj){
+                console.log(objs);
+            }
+
+            for(let key of Object.keys(obj)){
+                console.log(`The Keys are ${key}`);
+
+            }
+    </script>
+</body>
+</html>

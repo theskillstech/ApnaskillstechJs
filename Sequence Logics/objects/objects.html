@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript objects</title>
+</head>
+<body>
+    <script>
+    // simple object in javascript 
+    const person = { 
+    name: 'John', 
+    age: 20, 
+};
+
+// accessing property
+console.log(person["name"]); // John
+console.log(person.name);
+
+
+// nested object 
+
+
+// nested object
+const student = { 
+    name: 'John', 
+    age: 20,
+    marks: {
+        science: 70,
+        math: 75
+    }
+}
+
+// accessing property of student object
+console.log(student.marks); // {science: 70, math: 75}
+
+// accessing property of marks object
+console.log(student.marks.science); // 70
+
+
+
+// object with methods 
+
+const obj = {
+    name: 'Sam',
+    age: 30,
+    // using function as a value
+    greet: function() { console.log('hello') }
+}
+
+obj.greet(); // hello
+
+
+    </script>
+</body>
+</html>

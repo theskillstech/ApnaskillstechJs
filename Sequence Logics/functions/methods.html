@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Methods</title>
+</head>
+<body>
+    <script>
+        // js methods
+
+        // object containing method
+const person = {
+    name: 'John',
+    greet: function() { console.log('hello'); }
+};
+
+
+// accessing method and property
+const obj = {
+    name: 'John',
+    abc: function() { console.log('hello'); }
+};
+
+// accessing property
+person.name; // John
+
+// accessing method
+obj.abc(); // hello
+
+//simple adding javascript object methods 
+
+// creating an object
+let student = { };
+
+// adding a property
+student.name = 'John';
+
+// adding a method
+student.greet = function() {
+    console.log('hello');
+}
+
+// accessing a method
+student.greet(); // hello
+
+
+// using methods this keyword
+
+const xyz = {
+    name: 'John',
+    age: 30,
+
+    // accessing name property by using this.name
+    greet: function() { console.log('The name is' + ' ' + this.name); }
+};
+
+xyz.greet();
+    </script>
+</body>
+</html>

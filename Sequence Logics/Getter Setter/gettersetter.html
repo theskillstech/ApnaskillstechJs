@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter Setter Methods</title>
+</head>
+<body>
+    <script>
+        const student = {
+
+// data property
+firstName: 'Monica',
+
+// accessor property(getter)
+get getName() {
+    return this.firstName;
+}
+};
+
+// accessing data property
+console.log(student.firstName); // Monica
+
+// accessing getter methods
+console.log(student.getName); // Monica
+
+// trying to access as a method
+console.log(student.getName()); // error
+
+
+// JavaScript Setter
+
+const students = {
+    firstName: 'Monica',
+    
+    //accessor property(setter)
+    set changeName(newName) {
+        this.firstName = newName;
+    }
+};
+
+console.log(students.firstName); // Monica
+
+// change(set) object property using a setter
+students.changeName = 'Sarah';
+
+console.log(students.firstName); // Sarah
+
+// In JavaScript, you can also use Object.defineProperty() method to add getters and setters. For example,
+const std = {
+    firstName: 'Monica'
+}
+
+// getting property
+Object.defineProperty(student, "getName", {
+    get : function () {
+        return this.firstName;
+    }
+});
+
+// setting property
+Object.defineProperty(std, "changeName", {
+    set : function (value) {
+        this.firstName = value;
+    }
+});
+
+// The Object.defineProperty() method takes three arguments.
+// The first argument is the objectName.
+// The second argument is the name of the property.
+// The third argument is an object that describes the property.
+
+console.log(std.firstName); // Monica
+
+// changing the property value
+std.changeName = 'Sarah';
+
+console.log(std.firstName); // Sarah
+
+
+
+    </script>
+</body>
+</html>

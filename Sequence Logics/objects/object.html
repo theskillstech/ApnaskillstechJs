@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>objects JavaScript</title>
+  </head>
+  <body>
+    <script>
+      // JavaScript Objects
+
+      var a = {
+        fname: "The Skills",
+        lname: "Tech",
+        age: 23,
+        email: "theskillstech.com",
+        // pass array in object
+        fav: ["Osama", "Talha", "Zohaib"],
+        // pass function
+        salery: function () {
+          return 250000;
+        },
+        fullname: function () {
+          return this.fname + this.lname;
+        },
+        city: {
+          Pakistan: "Karachi",
+          India: "Mumbai",
+        },
+      };
+
+      //document.write(a);
+      console.log(a);
+      console.log(a.fav[1]);
+      console.log(a.salery());
+      console.log(a.fullname());
+      console.log(a.city.Pakistan);
+
+      // create A Object with Dynamicaly
+
+      let person = new Object();
+
+      person.firstname = "Computer Science";
+      person.lastname = "Software Deparment";
+      person.tankha = 50000;
+      console.log(person);
+      console.log(person.tankha);
+      console.log(person["firstname"]);
+
+
+      // its not an object this is string  
+
+
+      let people = new Object("Pakistan",'India','Australia','Newzeland');
+  
+      console.log(people);
+  </script>
+  </body>
+</html>

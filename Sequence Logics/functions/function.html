@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Function</title>
+  </head>
+  <body>
+    <script>
+      // JavaScript Simple  Function
+      // function defining
+
+      function Abc() {
+        console.log("This is Abc function");
+      }
+      Abc(); // function calling
+
+      Abc();
+      // function with Parameters
+
+      function sum(a, b) {
+        console.log(a + b);
+      }
+
+      sum(10, 20);
+
+      function name(fname = "Basheer", lname = "Ahmed") {
+        console.log(fname + " " + lname);
+      }
+      name("The Skills", "Tech");
+
+      // Function With Return values
+
+      function friends(fname = "osama", lname = "abbas") {
+        let f = fname + " " + lname;
+        return f;
+      }
+
+      let fn = friends("Talha", "Qureshi");
+      console.log(fn);
+
+      // Return with Percentage Program Example
+
+      function sum(math, eng, sc) {
+        var s = math + eng + sc;
+        return s;
+      }
+
+      function percentage(tt) {
+        var per = (tt / 300) * 100;
+        document.write(per);
+      }
+      var total = sum(55, 65, 75);
+      percentage(total);
+    </script>
+  </body>
+</html>

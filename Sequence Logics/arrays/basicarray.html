@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <script>
+      // Arrays in JavaScript
+
+      let arr = [10, 20, 30, 50];
+      //   console.log(arr);
+
+      for (let b = 0; b <= arr.length; b++) {
+        console.log(arr[b]);
+      }
+
+      for (let b = 0; b <= 3; b++) {
+        console.log(arr[b]);
+      }
+
+      // Another Way To Create Array
+      let a = new Array(
+        "Basheer Ahmed",
+        "The Skills Tech",
+        23,
+        "Software Engineer"
+      );
+      for (c = 0; c <= a.length; c++) {
+        console.log(a[c]);
+      }
+
+      for (c = 0; c <= 3; c++) {
+        console.log(a[c]);
+      }
+
+      // How to set Values from user input with the help of pass array element's size in new Array function
+      let ary = new Array(4);
+      for (let g = 0; g < 4; g++) {
+        ary[g] = prompt("Enter the values ");
+        console.log(ary[g]);
+      }
+
+      // Create A MultiDimensional Array
+
+      let friendlist = [
+        ["Osama Abbas", 26, "Software Engineer", "E-Commerce Management"],
+        ["Talha Qureshi", 24, "Software Engineer", "Web Developer"],
+        [
+          "Zohaib Sharif",
+          33,
+          "Associate Mechanical Engineer ",
+          "Technical Support ",
+        ],
+      ];
+      //   call a indivisula elements
+      // console.log(friendlist[0][1]);
+
+      // for (let b = 0; b < 4; b++) {
+      //   for (let c = 0; c < 4; c++) {
+      //     console.log(friendlist[b][c]);
+      //   }
+      // }
+//       let Aptech = new Array(
+        
+//           ("Aptech Site","North","MEtro Star Get"),
+//           (" garden","North karachi","sharah E Faisal"),
+
+
+//       );
+//       for(let i = 0; i <=2; i++){
+//         for(let j =0; j <=2; j++){
+// console.log(Aptech[i][j]);
+//         } 
+//       }
+      
+    </script>
+  </body>
+</html>

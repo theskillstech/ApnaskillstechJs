@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameters</title>
+</head>
+<body>
+    <script>
+        // Default Parameters 
+
+        // The concept of default parameters is a new feature introduced in the ES6 version of JavaScript. This allows us to give default values to function parameters.
+        
+                function sum(x = 3, y = 5) {
+
+        // return sum
+        return x + y;
+        }
+
+        console.log(sum(5, 15));  // 20 
+        console.log(sum(7));        // 12
+        console.log(sum());          // 8
+
+        //         the default value of x is 3 and the default value of y is 5.
+
+        // sum(5, 15) - When both arguments are passed, x takes 5 and y takes 15.
+        // sum(7) - When 7 is passed to the sum() function, x takes 7 and y takes default value 5.
+        // sum() - When no argument is passed to the sum() function, x takes default value 3 and y takes default value 5.
+        
+        // Using Expressions as Default Values
+ 
+        // It is also possible to provide expressions as default values.
+
+            function sum(x = 1, y = x,  z = x + y) {
+        console.log( x + y + z );
+    }
+
+    sum(); // 4
+
+
+    //     The default value of x is 1
+    // The default value of y is set to x parameter
+    // The default value of z is the sum of x and y
+    // If you reference the parameter that has not been initialized yet, you will get an error. 
+
+        function sum( x = y, y = 1 ) {
+        console.log( x + y);
+    }
+
+    sum(); 
+
+    // Passing Function Value as Default Value
+
+    // using a function in default value expression
+
+    const sum = () => 15;
+
+    const calculate = function( x, y = x * sum() ) {
+        return x + y;
+    }
+
+    const result = calculate(10);
+    console.log(result);            // 160
+
+    //     10 is passed to the calculate() function.
+    // x becomes 10, and y becomes 150 (the sum function returns 15).
+    // The result will be 160.
+
+
+    // Passing undefined Value
+
+    function test(x = 1) {
+  console.log(x);
+}
+
+    // passing undefined
+    // takes default value 1
+    test(undefined); // 1
+
+
+
+
+    // internet logic tests 
+    
+ 
+ 
+ </script>
+</body>
+</html>

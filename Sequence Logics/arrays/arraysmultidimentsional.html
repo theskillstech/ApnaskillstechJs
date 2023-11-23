@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays MultiDimensional</title>
+</head>
+<body>
+    <script>
+
+        // Arrays MultiDimensional
+        const friends = [['Basheer Ahmed',24],['Sohaib Ahmed', 26], ['Osama Abbas',25]];
+
+        // console.log(friends[0][1]);
+        // console.log(friends[1][0]);
+
+        // iteraring over the multidimensional arrays
+        // using forEach loop 
+        friends.forEach((student)=>{
+        student.forEach((data)=>{
+            console.log(data);
+        });
+        });
+
+        let players = [['shahid Afridi',45],['Shoaib Malik',42]];
+        for(let i of players){
+            for(let j of i){
+                console.log(j);
+            }
+        }
+
+
+        for(let i = 0; i <players.length;i++){
+            // get the length of the array
+            let legend = players[i].length;
+
+            for(let j=0; j < legend;j++){
+                console.log(players[i][j]);
+            }
+
+        }
+    let studentsData = [['Jack', 24], ['Sara', 23],];
+    studentsData.push(['Peter', 24]);
+
+    console.log(studentsData); //[["Jack", 24], ["Sara", 23], ["Peter", 24]
+    
+    // using index notation
+    let studentsDatas = [['Jack', 24], ['Sara', 23],];
+    studentsDatas[1][2] = 'hello';
+
+    console.log(studentsDatas); // [["Jack", 24], ["Sara", 23, "hello"]]
+    // using push()
+    let studentsDatax = [['Jack', 24], ['Sara', 23],];
+    studentsDatax[1].push('hello');
+
+    console.log(studentsDatax); // [["Jack", 24], ["Sara", 23, "hello"]]        
+    
+    let studentsDatay = [['Jack', 24], ['Sara', 23],];
+
+    // adding element at 1 index
+        studentsDatay.splice(1, 0, ['Peter', 24]);
+
+        console.log(studentsDatay); // [["Jack", 24], ["Peter", 24], ["Sara", 23]]
+        // remove the array element from outer array
+    let studentsDatav = [['Jack', 24], ['Sara', 23],];
+    studentsDatav.pop();
+
+    console.log(studentsDatav); // [["Jack", 24]]
+
+    let students = [['Jack', 24], ['Sara', 23],];
+
+    // removing 1 index array item
+    students.splice(1,1);
+    console.log(students); // [["Jack", 24]]
+
+
+ </script>
+</body>
+</html>

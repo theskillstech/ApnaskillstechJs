@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Numbers</title>
+</head>
+<body>
+    <script>
+         // js numbers
+
+         const a1 = 5e9;
+console.log(a1); //5000000000
+
+const a2 = 5e-5;
+console.log(a2); // 0.00005
+
+
+const aa = 4 - 'hello';
+console.log(aa); // NaN
+
+const ab = isNaN(9);
+console.log(ab); // false
+
+const ac = isNaN(4 - 'hello');
+console.log(ac); // true
+
+// JavaScript Infinity
+// In JavaScript, when calculation is done that exceeds the largest (or smallest) possible number, Infinity (or -Infinity) is returned.
+
+// const a = 2 / 0;
+// console.log(a); // Infinity
+
+// const a = -2 / 0;
+// console.log(a); // -Infinity
+
+
+// JavaScript BigInt
+// In JavaScript, Number type can only represent numbers less than (253 - 1) and more than -(253 - 1). However, if you need to use a larger number than that, you can use the BigInt data type.
+
+// A BigInt number is created by appending n to the end of an integer.
+
+// BigInt value
+const value = 900719925124740998n;
+
+// Adding two big integers
+const value1 = value + 1n;
+console.log(value1); // returns "900719925124740999n"
+
+
+// JavaScript Numbers Are Stored in 64-bit
+// In JavaScript, numbers are stored in 64-bit format IEEE-754, also known as "double precision floating point numbers".
+
+// The numbers are stored in 64 bits (the number is stored in 0 to 51 bit positions, the exponent in 52 to 62 bit positions and the sign in 63 bit position).
+
+// Precision Problems
+// Operations on floating-point numbers results in some unexpected results. 
+    
+const a = 0.1 + 0.2;
+console.log(a); // 0.30000000000000004
+
+
+// The result should be 0.3 instead of 0.30000000000000004. This error occurs because in JavaScript, numbers are stored in binary form to represent decimal digits internally. And decimal numbers can't be represented in binary form exactly.
+
+// const a = (0.1 * 10 + 0.2 * 10) / 10;
+// console.log(a); // 0.3
+
+// const a = 0.1 + 0.2;
+// console.log(a.toFixed(2)); // 0.30
+
+
+// const a = 9999999999999999
+// console.log(a); // 10000000000000000
+
+
+// const a = 45;
+
+// // creating a number object
+// const b = new Number(45);
+
+// console.log(a); // 45
+// console.log(b); // 45
+
+// console.log(typeof a); // "number"
+// console.log(typeof b); // "object"
+
+
+// JavaScript Number Methods
+// Here is a list of built-in number methods in JavaScript.
+
+
+// check if a is integer
+// const a = 12;
+// console.log(Number.isInteger(a)); // true
+
+// // check if b is NaN
+// const b = NaN;
+// console.log(Number.isNaN(b)); // true
+
+// // display upto two decimal point
+// const d = 5.1234;
+// console.log(d.toFixed(2)); // 5.12
+
+
+// JavaScript Number Properties
+// Here is a list of Number properties in JavaScript.
+
+// Property	Description
+// EPSILON	returns the smallest interval between two representable numbers
+// MAX_SAFE_INTEGER	returns the maximum safe integer
+// MAX_VALUE	returns the largest possible value
+// MIN_SAFE_INTEGER	returns the minimum safe integer
+// MIN_VALUE	returns the smallest possible value
+// NaN	represents 'Not-a-Number' value
+// NEGATIVE_INFINITY	represents negative infinity
+// POSITIVE_INFINITY	represents positive infinity
+// prototype	allows the addition of properties to Number objects
+
+
+// largest possible value
+const c = Number.MAX_VALUE;
+console.log(c); // 1.7976931348623157e+308
+
+// maximum safe integer
+const ad = Number.MAX_SAFE_INTEGER;
+console.log(ad); // 9007199254740991
+
+
+// JavaScript Number() Function
+// The Number() function is used to convert various data types to numbers. 
+
+// const a = '23'; // string
+// const b = true; // boolean
+
+// //converting to number
+// const result1 = Number(a);
+// const result2 = Number(b);
+
+// console.log(result1); // 23
+// console.log(result2); // 1
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funtion Parameters and Argument Rest and Spread Operator</title>
+</head>
+<body>
+    <script>
+
+         // function parameters and arguments, rest & spread operators 
+
+        //  old javascript syntax before Es6 
+
+        function abc(a,b){
+            console.log(a+b);
+        }
+        abc(10,20);
+
+        // new soluiton for multiple values 
+
+        function sum(){
+            let sum = 0;
+            for(let i in arguments){
+                sum += arguments[i];
+            }
+            console.log(sum);
+        }
+
+        sum(10,30,100,50,50);
+
+        // new syntax here for Es6
+
+        function sum(name,...args){
+            let sum = 0;
+            for(let i in args){
+                sum += args[i];
+            }
+            console.log(sum);
+            console.log(name);
+        }
+        sum("Apna Skills Tech",20,40,60);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Methods </title>
+</head>
+<body>
+    <script>
+        // this methods for 
+        const obj = {
+            name : "Basheer Ahmed",
+            age : 20,
+            greet:function(){
+            console.log("This Methods used for Fetch Inside Objects values from methods "+this.name+" "+this.age);
+        }
+        }
+       
+        console.log(obj.greet());
+
+        const person = {
+            brand:'The Skills Tech',
+            social:'FaceBook, Instagram',
+            greet:function(){
+                let founder = "Basheer Ahmed";
+                console.log("The Brand Name is of your social accounts "+this.brand+' '+this.social+ ' '+this.founder);
+            }
+        }
+        console.log(person.greet());
+    </script>
+</body>
+</html>

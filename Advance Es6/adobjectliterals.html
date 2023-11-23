@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adv Object Literals</title>
+</head>
+<body>
+
+    <script>
+
+        // Example 1
+        let name = "Basheer Ahmed";
+        let course = "Software Development";
+
+        var obj = {
+            name: name,
+            course: course
+        }
+        console.log(obj)
+        
+        //Example 2
+
+        let n = "brand"; 
+        let objs = {
+            [n]:"Apna Skills Tech",
+            course : "Software Engineering"
+        };
+        console.log(objs.course)
+
+        // Example 3 
+
+        let subject = "Computer Science"; 
+        let computer = {
+            [subject + "system"]:"Network Security",
+            course : "Software Malwares",
+            detail : function(){
+                return `${this.course} is subject ${this.subject}`;
+            }
+        };
+
+        
+        console.log(computer.detail())
+
+        // Example 4 
+
+        // OLD SYNTAX
+        // let objects = {
+        //     name: "Basheer Ahemd",
+        //     show:function(){
+        //        console.log(this.name) 
+        //     }
+        // };
+          // New SYNTAX
+           let objects = {
+            name : "Basheer Ahmed",
+            show(){
+                console.log(this.name)
+            }
+        }
+        // console.log(objects.show())
+        // console.log(objects['show']())
+
+
+        //Example 5
+
+
+        let country = {
+            city : "Karachi, Pakistan",
+           'detail show' (){
+                console.log(this.city)
+            }
+        }
+       
+        console.log(country['detail show']())
+        //Example 6
+
+        let friend = "osama";
+        let field = "React";
+        function passion(friend,field){
+            return {friend, field}
+        }
+        let s =passion(friend, field);
+        console.log(s.field);
+
+
+    </script>
+</body>
+</html>

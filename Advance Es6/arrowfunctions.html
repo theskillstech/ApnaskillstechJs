@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <script>
+
+    // you will learn about JavaScript arrow function with the help of examples.
+
+    // Arrow function is one of the features introduced in the ES6 version of JavaScript. It allows you to create functions in a cleaner way compared to regular functions. 
+
+    // functions Expressions 
+    let x = function (x,y) {
+    return x * y;
+    }
+
+    // Arrow Function Syntax
+    // The syntax of the arrow function is:
+
+    // myFunction is the name of the function
+    // arg1, arg2, ...argN are the function arguments
+    // statement(s) is the function body
+
+    // if the body has single statement or expression, you can write arrow functions as
+    
+    let greet = () => {
+        console.log('Hello');
+    }
+    greet();
+
+    // arrow functions with one Arguments 
+    // if a function has only arguments, you can omit thhe parentheses
+    
+    let age = 5;
+    let welcome = (age < 18)? () => console.log('Baby'): () => console.log('Adult');
+    welcome();
+
+    // Multiline Arrow Functions
+    // If a function body has multiple statements, you need to put them inside curly brackets {}
+    let sum = (a,b) => {
+        let result = a + b;
+        return result;
+        
+    }
+    let result1 = sum(5,7);
+
+    console.log(result1);
+
+    // this with Arrow Function
+    // Inside a regular function, this keyword refers to the function where it is called.
+    // Inside a regular function
+    function person (){
+        this.name = "Basheer",
+        this.age = 18,
+        this.sayname = function(){
+            // this is accessible
+            console.log(this.age);
+            
+            function innerfunc(){
+                // this refers to the global object 
+                console.log(this.age);
+            }
+
+            innerfunc();
+        }
+    }
+let g = new person();
+g.sayname();
+
+
+// Here, this.age inside this.sayName() is accessible because this.sayName() is the method of an object.
+
+// However, innerFunc() is a normal function and this.age is not accessible because this refers to the global object (Window object in the browser). Hence, this.age inside the innerFunc() function gives undefined.
+
+
+function Person() {
+    this.name = 'Jack',
+    this.age = 25,
+    this.sayName = function () {
+
+        console.log(this.age);
+        let innerFunc = () => {
+            console.log(this.age);
+        }
+
+        innerFunc();
+    }
+}
+
+const s = new Person();
+s.sayName();
+
+
+    // Here, the innerFunc() function is defined using the arrow function. And inside the arrow function, this refers to the parent's scope. Hence, this.age gives 25.
+
+//     Arguments Binding
+// Regular functions have arguments binding. That's why when you pass arguments to a regular function, you can access them using the arguments keyword. 
+
+
+let xs = function () {
+    console.log(arguments);
+}
+xs(4,6,7); // Arguments [4, 6, 7]
+
+
+// Arrow functions do not have arguments binding.
+
+// When you try to access an argument using the arrow function, it will give an error.
+
+
+let xss = () => {
+    console.log(arguments);
+}
+
+xss(4,6,7); 
+// ReferenceError: Can't find variable: arguments
+
+
+// To solve this issue, you can use the spread syntax. 
+
+
+let xd = (...n) => {
+    console.log(n);
+}
+
+xd(4,6,7); // [4, 6, 7]
+
+
+// Arrow Function with Promises and Callbacks
+// Arrow functions provide better syntax to write promises and callbacks.
+
+// ES5
+// asyncFunction().then(function() {
+//     return asyncFunction1();
+// }).then(function() {
+//     return asyncFunction2();
+// }).then(function() {
+//     finish;
+// });
+// can be written as
+
+// // ES6
+// asyncFunction()
+// .then(() => asyncFunction1())
+// .then(() => asyncFunction2())
+// .then(() => finish);
+
+// Things You Should Avoid With Arrow Functions
+
+
+// 1. You should not use arrow functions to create methods inside objects.
+
+ let person = {
+    name: 'Jack',
+    age: 25,
+    sayName: () => {
+
+        // this refers to the global .....
+        //
+        console.log(this.age);
+    }
+}
+person.sayName(); // undefined
+
+// 2. You cannot use an arrow function as a constructor. 
+// let Foo = () => {};
+// let foo = new Foo(); // TypeError: Foo is not a constructor
+// old functions can review in javascript 
+function hello(){
+    console.log("Hey, Whats App");
+}
+hello();
+let hello = function(){
+    console.log("Karachi");
+}
+
+// this is arrow function 
+
+let chatmessage = () => {
+    console.log("this is arrow function");
+}
+chatmessage();
+// how to return function message in javscript 
+let welcomes = function(name) {
+return "This is Welcomes Function to return the value :)"+name;
+}
+
+ console.log(welcomes("Basheer"));
+ // arrow function syntax 
+ 
+let wellx = (name) => {
+return "This is Welcomes Function to return the value :)"+name;
+}
+console.log(wellx("Well X functions"));
+
+
+</script>
+</body>
+</html>

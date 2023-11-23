@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in For Loop</title>
+</head>
+<body>
+    <script>
+        // for in for loop
+        // const myname = "Basheer";
+        // for(let char of myname){
+        //     console.log("My Character name :"+char);
+        // }
+            const myluckynumber = [1,2,3,4,5,6,7,8];
+
+            for(let number of myluckynumber){
+                console.log("My Lucky Numbers is "+ number);
+            }
+
+            for(let ind in myluckynumber){
+                console.log("using and fetching lucky numbers"+ind);
+            }
+
+            const obj = {
+                name:'Basheer',
+                age:23,
+
+            };
+
+            // for(let key in obj){
+            //     console.log(`The Keys are ${key}`);
+
+            // }
+
+            for(let key of Object.keys(obj)){
+                console.log(`The Keys are ${key}`);
+
+            }
+
+
+             // for in loop with new template string example
+
+             const student = {
+      name: 'Monica',
+    class: 7,
+    age: 12
+}
+
+// using for...in
+for ( let key in student ) {
+
+    // display the properties
+    console.log(`${key} => ${student[key]}`);
+}
+
+
+
+const salaries= {
+    Jack : 24000,
+    Paul : 34000,
+    Monica : 55000
+}
+
+// using for...in
+for ( let i in salaries) {
+
+    // add a currency symbol
+    let salary = "$" + salaries[i];
+
+    // display the values
+    console.log(`${i} : ${salary}`);
+}
+
+
+const string = 'code';
+
+// using for...in loop
+for (let i in string) {
+    console.log(string[i]);
+}
+
+
+
+// define array
+const arr = [ 'hello', 1, 'JavaScript' ];
+
+// using for...in loop
+for (let x in arr) {
+    console.log(arr[x]);
+}
+             // for of loop with new template string example
+
+
+             // array
+const students = ['John', 'Sara', 'Jack'];
+
+// using for...of
+for ( let element of students ) {
+
+    // display the values
+    console.log(element);
+}
+
+
+// string
+const strings = 'code';
+
+// using for...of loop
+for (let i of strings) {
+    console.log(i);
+}
+
+// define Set
+const set = new Set([1, 2, 3]);
+
+// looping through Set
+for (let i of set) {
+    console.log(i);
+}
+
+
+// define Map
+let map = new Map();
+
+// inserting elements
+map.set('name', 'Jack');
+map.set('age', '27');
+
+// looping through Map
+for (let [key, value] of map) {
+    console.log(key + '- ' + value);
+}
+
+
+// User Defined Iterators
+// You can create an iterator manually and use the for...of loop to iterate through the iterators. 
+
+
+// creating iterable object
+const iterableObj = {
+
+// iterator method
+[Symbol.iterator]() {
+    let step = 0;
+    return {
+        next() {
+            step++;
+            if (step === 1) {
+                return { value: '1', done: false};
+             }
+            else if (step === 2) {
+                return { value: '2', done: false};
+            }
+            else if (step === 3) {
+                return { value: '3', done: false};
+            }
+            return { value: '', done: true };
+        }
+    }
+}
+}
+
+// iterating using for...of
+for (const i of iterableObj) {
+console.log(i);
+}
+
+
+
+// for...of with Generators
+// Since generators are iterables, you can implement an iterator in an easier way. Then you can iterate through the generators using the for...of loop.
+
+// generator function
+function* generatorFunc() {
+  
+  yield 10;
+  yield 20;
+  yield 30;
+}
+
+const objs = generatorFunc();
+
+// iteration through generator
+for (let value of objs) {
+  console.log(value);
+}
+
+
+
+    </script>
+</body>
+</html>
